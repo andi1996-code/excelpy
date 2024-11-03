@@ -48,7 +48,7 @@ def process_file():
         df_filtered['tax'] = df_filtered['net'] * 0.10
 
         # Filter data yang bulan >= 10
-        df_filtered = df_filtered[pd.to_datetime(df_filtered['product_order_date']).dt.month >= 10]
+        df_filtered = df_filtered[pd.to_datetime(df_filtered['product_order_date']).dt.month >= 11]
 
         # Simpan hasil ke file Excel baru
         output_filename = f'processed_{file.filename}'
